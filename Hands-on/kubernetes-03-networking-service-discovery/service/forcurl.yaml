@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: forcurl
+spec:
+  containers:
+  - name: forcurl
+    image: clarusway/forping
+    imagePullPolicy: IfNotPresent 
+  restartPolicy: Always
+
+# If imagePullPolicy is set to Always, Kubernetes will always pull the image from the Repository. With IfNotPresent, Kubernetes will only pull the image when it does not already exist on the node. While with imagePullPolicy set to Never, Kubernetes will never pull the image.  
+
+# The restartPolicy applies to all containers in the Pod. restartPolicy only refers to restarts of the containers by the kubelet on the same node. After containers in a Pod exit, the kubelet restarts them with an exponential back-off delay (10s, 20s, 40s, …), that is capped at five minutes. Once a container has executed for 10 minutes without any problems, the kubelet resets the restart backoff timer for that container.The spec of a Pod has a restartPolicy field with possible values Always, OnFailure, and Never. The default value is Always.
+ 
