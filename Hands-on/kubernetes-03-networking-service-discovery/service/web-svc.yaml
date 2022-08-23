@@ -13,4 +13,5 @@ spec:
   selector:
     env: front-end
 
-# TargetPort is the port on which the service will send requests to, that your pod will be listening on. Your application in the container will need to be listening on this port also.    
+# TargetPort is the port on which the service will send requests to, that your pod will be listening on. 
+# Your application in the container will need to be listening on this port also.    
